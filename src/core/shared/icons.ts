@@ -1,0 +1,1 @@
+export { ArrowTopRightOnSquareIcon as ExternalLinkIcon } from '@heroicons/react/24/solid'
