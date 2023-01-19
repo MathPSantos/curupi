@@ -19,3 +19,5 @@ export const PriceField = forwardRef<HTMLInputElement, PriceFieldProps>(
     return <input {...inputProps} ref={inputRef} className={className} />;
   }
 );
+
+PriceField.displayName = "PriceField";
