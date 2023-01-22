@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import { AriaNumberFieldProps, useNumberField } from "react-aria";
 import { useNumberFieldState } from "react-stately";
 
-import { currencyFormatOption } from "./config";
+import { currencyFormatOption } from "../config";
 
 interface PriceFieldProps extends AriaNumberFieldProps {
   className?: string;
