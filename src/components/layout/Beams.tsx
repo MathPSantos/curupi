@@ -1,5 +1,5 @@
 export const Beams = () => (
-  <div className="absolute inset-0 bg-beams bg-center bg-no-repeat bg-cover">
+  <div className="absolute inset-0 bg-beams bg-top bg-no-repeat bg-cover">
     <div
       className="absolute inset-0 bg-grid-slate-400/[0.05]"
       style={{

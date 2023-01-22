@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { Beams, Header } from "@components/layout";
-import { PriceField } from "@components/common/PriceField";
+import { PriceField } from "@components/common";
 
 export default function FinancialSupport() {
   return (
@@ -47,7 +47,7 @@ export default function FinancialSupport() {
                 <PriceField
                   aria-labelledby="__support-label"
                   className="mt-5 h-[56px] w-full text-slate-800 text-[44px] font-bold outline-0"
-                  defaultValue={10}
+                  defaultValue={100}
                 />
               </div>
 
