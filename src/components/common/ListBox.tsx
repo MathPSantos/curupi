@@ -49,6 +49,8 @@ export const ListBox = forwardRef<HTMLUListElement, ListBoxProps>(
   }
 );
 
+ListBox.displayName = "ListBox";
+
 interface SectionProps {
   section: Node<unknown>;
   state: ListState<unknown>;
@@ -122,3 +124,5 @@ const Option = forwardRef<HTMLLIElement, OptionProps>(
     );
   }
 );
+
+Option.displayName = "Option";

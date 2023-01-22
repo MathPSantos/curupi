@@ -47,4 +47,6 @@ export const ComboBox = forwardRef<HTMLInputElement, ComboBoxProps>(
   }
 );
 
+ComboBox.displayName = "ComboBox";
+
 export { Item as ComboBoxItem } from "react-stately";
