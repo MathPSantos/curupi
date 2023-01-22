@@ -46,7 +46,7 @@ export default function FinancialSupport() {
 
                 <PriceField
                   aria-labelledby="__support-label"
-                  className="mt-5 h-[56px] w-full text-slate-800 text-[44px] font-bold outline-0"
+                  className="mt-5 h-[56px] w-full text-slate-800 text-[44px] font-bold outline-0 bg-transparent"
                   defaultValue={100}
                 />
               </div>

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply text-slate-300;
+html,
+body {
+  @apply bg-slate-50 text-slate-300;
 }
