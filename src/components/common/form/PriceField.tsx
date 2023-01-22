@@ -2,30 +2,27 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 import { AriaNumberFieldProps, useNumberField } from "react-aria";
 import { useNumberFieldState } from "react-stately";
 
+import { currencyFormatOption } from "./config";
+
 interface PriceFieldProps extends AriaNumberFieldProps {
   className?: string;
 }
 
-const defaultFormatOptions = {
-  style: "currency",
-  currency: "BRL",
-} satisfies AriaNumberFieldProps["formatOptions"];
-
 export const PriceField = forwardRef<HTMLInputElement, PriceFieldProps>(
-  ({ className, formatOptions = defaultFormatOptions, ...props }, ref) => {
+  ({ className, formatOptions = currencyFormatOption, ...rest }, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
     useImperativeHandle(ref, () => inputRef?.current as HTMLInputElement, []);
 
+    const props = {
+      ...rest,
+      formatOptions,
+    } satisfies AriaNumberFieldProps;
+
     const state = useNumberFieldState({
       ...props,
-      formatOptions,
       locale: "pt-BR",
     });
-    const { inputProps } = useNumberField(
-      { ...props, formatOptions },
-      state,
-      inputRef
-    );
+    const { inputProps } = useNumberField(props, state, inputRef);
 
     return <input {...inputProps} ref={inputRef} className={className} />;
   }

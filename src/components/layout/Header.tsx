@@ -2,11 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { ExternalLinkIcon } from "@core/shared/icons";
+import { LANDING_PAGES } from "@core/routes";
 
 export const Header = () => (
   <header className="px-4">
     <div className="relative mx-auto max-w-screen-2xl flex items-center justify-between py-6">
-      <Image src="/img/logo.svg" alt="" width={104} height={25} />
+      <Link href={LANDING_PAGES.ROOT}>
+        <Image src="/img/logo.svg" alt="" width={104} height={25} />
+      </Link>
 
       <nav className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <ul className="flex items-center gap-7 text-sm">
