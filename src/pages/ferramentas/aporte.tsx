@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { Beams, Header } from "@components/layout";
-import { PriceField } from "@components/common";
+import { NumberField, PriceField } from "@components/common";
 
 export default function FinancialSupport() {
   return (
@@ -71,6 +71,14 @@ export default function FinancialSupport() {
                     </h3>
 
                     <div className="flex items-center gap-3"></div>
+                  </div>
+                  <div className="flex items-center">
+                    <NumberField
+                      label="Alocação"
+                      minValue={1}
+                      maxValue={0.01}
+                      formatOptions={{ style: "percent", signDisplay: "never" }}
+                    />
                   </div>
                 </div>
               </div>
