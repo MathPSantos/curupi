@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { Beams, Header } from "@components/layout";
 import { Button, NumberField, PriceField, Progress } from "@components/common";
+import { ClipboardIcon } from "@core/shared/icons";
 
 export default function FinancialSupport() {
   return (
@@ -98,6 +99,10 @@ export default function FinancialSupport() {
 
               <div className="mt-3 flex flex-row-reverse gap-3">
                 <Button>Gerar resumo dos aportes</Button>
+                <Button variant="secondary">
+                  <ClipboardIcon />
+                  Copiar link
+                </Button>
               </div>
             </div>
           </div>
