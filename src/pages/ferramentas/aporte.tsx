@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { Beams, Header } from "@components/layout";
-import { NumberField, PriceField } from "@components/common";
+import { NumberField, PriceField, Progress } from "@components/common";
 
 export default function FinancialSupport() {
   return (
@@ -55,6 +55,16 @@ export default function FinancialSupport() {
                 <h2 className="font-semibold text-slate-600 text-2xl">
                   Alocação
                 </h2>
+                <div className="mt-5 grid grid-cols-3 gap-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <div className="flex flex-col gap-1.5" key={i}>
+                      <strong className="text-slate-600 text-sm font-semibold">
+                        Renda fixa
+                      </strong>
+                      <Progress value={20} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -75,8 +85,8 @@ export default function FinancialSupport() {
                   <div className="flex items-center">
                     <NumberField
                       label="Alocação"
-                      minValue={1}
-                      maxValue={0.01}
+                      maxValue={1}
+                      minValue={0.01}
                       formatOptions={{ style: "percent", signDisplay: "never" }}
                     />
                   </div>
