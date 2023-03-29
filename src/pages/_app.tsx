@@ -1,11 +1,11 @@
 import { QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 import { Sora } from "@next/font/google";
+import { SSRProvider } from "react-aria";
 
 import { queryClient } from "@core/libs/query";
 
 import "@styles/main.scss";
-import { SSRProvider } from "react-aria";
 
 const soraFont = Sora({
   subsets: ["latin"],

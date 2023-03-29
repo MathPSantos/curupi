@@ -21,9 +21,9 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "13.1.2",
     "react": "18.2.0",
-    "react-aria": "^3.22.0",
+    "react-aria": "^3.23.1",
     "react-dom": "18.2.0",
-    "react-stately": "^3.20.0",
+    "react-stately": "^3.21.0",
     "sass": "^1.57.1",
     "typescript": "4.9.4"
   },
